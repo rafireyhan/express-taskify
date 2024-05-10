@@ -10,6 +10,10 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
 
+//Routes
+const userRoutes = require("./routes/userRoutes");
+app.use("/user",userRoutes);
+
 //PORT
 const port = process.env.PORT || 3001;
 
